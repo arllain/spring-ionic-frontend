@@ -28,7 +28,7 @@ export class CartPage {
     this.loadImageUrls();
   }
 
-  loadImageUrls() {
+  loadImageUrls() {1
     for (var i=0; i<this.items.length; i++) {
       let item = this.items[i];
       this.produtoService.getSmallImageFromBucket(item.produto.id)
@@ -57,5 +57,9 @@ export class CartPage {
 
   goOn() {
     this.navCtrl.setRoot('CategoriasPage');
+  }
+
+  checkout(){
+    this.navCtrl.push('PickAddressPage');
   }
 }
